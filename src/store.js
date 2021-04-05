@@ -1,12 +1,12 @@
 import { createStore } from "redux";
 
-function reducer(state, action) {
+const reducer = (state, action) => {
   if (state === undefined) {
     return { number: 0 };
   } else if (action.type === "INCREMENT") {
     return { ...state, number: state.number + action.size };
   }
-}
+};
 
 const store = createStore(
   reducer,
