@@ -2,17 +2,11 @@ import DisplayNumber from "../Components/DisplayNumber";
 import { connect } from "react-redux";
 
 const mapReduxStateToReactProps = (state) => {
+  //redux state 가 바뀔때마다 호출됨
   return { number: state.number };
 };
 
-const mapReduxDispatchToReactProps = () => {
-  return {};
-};
-
-export default connect(
-  mapReduxStateToReactProps,
-  mapReduxDispatchToReactProps
-)(DisplayNumber);
+export default connect(mapReduxStateToReactProps)(DisplayNumber);
 
 // import React, { Component } from "react";
 // import store from "../store";
